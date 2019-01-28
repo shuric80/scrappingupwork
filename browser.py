@@ -1,6 +1,3 @@
-import sys
-import time
-from datetime import datetime
 import logging
 from importlib import import_module
 import importlib.util
@@ -11,12 +8,13 @@ from selenium.webdriver.support.ui import  WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-import requests
-from bs4 import BeautifulSoup
 
-from header import header
+FORMAT = '%(asctime)-15s %(clientip)s %(user)-8s %(message)s'
+logging.basicConfig(format=FORMAT)
 
 logger = logging.getLogger(__file__)
+logger.setLevel(logging.INFO)
+
 
 URL_LOGIN = 'https://www.upwork.com/ab/account-security/login'
 TIMEOUT = 10
@@ -30,6 +28,7 @@ class Browser:
             raise Exception()
 
         browser = import_module(lib_path)
+        logger.debug('Browser: {}'.format(name_browser))
         return browser
 
 
@@ -42,6 +41,7 @@ class Options:
             raise Exception()
 
         options = import_module(lib_path)
+        logging.debug('Options: {}'.format(name_options))
         return options
 
 
@@ -55,9 +55,9 @@ class AuthenticationPageUpwork:
 
     def fillLoginForm(self, login):
         self.wait_download('login_username').send_keys(login)
-        #self.browser.find_element_by_id('login_username').send_keys(login)
         self.browser.find_element_by_css_selector('.btn-block-sm.width-sm.btn.btn-primary.m-0.text-capitalize').click()
-        #self.browser.find_element_by_xpath("//button[@type='submit']").submit()
+        logger.debug('Send login:{}'.format(login))
+
 
     def wait_download(self, elem):
 
@@ -74,29 +74,29 @@ class AuthenticationPageUpwork:
 
     def fillPasswordForm(self, password):
         self.wait_download('login_password').send_keys(password)
-        #self.browser.find_element_by_id('login_password').send_keys(password)
         self.browser.find_element_by_css_selector('.checkbox-replacement-helper').click()
         self.browser.find_elements_by_css_selector('.btn-block-sm.width-sm.btn.btn-primary.m-0.text-capitalize')[1].click()
+        logger.debug('Password send.')
 
 
 class BrowserContext:
     def __init__(self, name='firefox', headless=False):
         options = Options.create(name).Options()
         options.headless = headless
-        self.browser = Browser.create(name).WebDriver(options=options)        
-        #self.browser.implicitly_wait(30)
- 
+        self.browser = Browser.create(name).WebDriver(options=options)       
+
 
     def __enter__(self):
         return self.browser
+
 
     def __exit__(self, exc_type, exc_val, exc_tb):       
         if exc_type:
             self.browser.save_screenshot('screenshot.png')
             logger.error('{}{}{}'.format(exc_type, exc_val, exc_tb))
         
-        self.browser.close()       
-        logger.info('Browser closed')
+        self.browser.quit()       
+        logger.info('Browser close.')
 
 
 class Authentication:
