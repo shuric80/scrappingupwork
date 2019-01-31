@@ -1,5 +1,6 @@
 import sys
 import time
+import csv
 import logging
 from importlib import import_module
 import importlib.util
@@ -8,8 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import  WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.keys import Keys
-
+import getpass
 
 FORMAT = '%(asctime)-15s %(clientip)s %(user)-8s %(message)s'
 logging.basicConfig(format=FORMAT)
@@ -20,6 +20,7 @@ logger.setLevel(logging.INFO)
 
 URL_LOGIN = 'https://www.upwork.com/ab/account-security/login'
 TIMEOUT = 10
+
 
 class Browser:
     @staticmethod
@@ -45,14 +46,6 @@ class Options:
         options = import_module(lib_path)
         logging.debug('Options: {}'.format(name_options))
         return options
-
-
-class JobFeed:
-    @staticmethod
-    def parse(section):
-        title = section.find_element_by_tag_name('h4').text
-        properties = section.find_element_by_tag_name('small').text
-        return dict(title = title, properties = properties)
 
 
 class AuthenticationPageUpwork:
@@ -85,71 +78,90 @@ class AuthenticationPageUpwork:
         self.wait_download('login_password').send_keys(password)
         self.browser.find_element_by_css_selector('.checkbox-replacement-helper').click()
         self.browser.find_elements_by_css_selector('.btn-block-sm.width-sm.btn.btn-primary.m-0.text-capitalize')[1].click()
-        logger.debug('Password send.')
+        logger.debug('Password send.')       
 
 
-    def search(self, name):
+
+class UpworkAuthentication:
+    def __init__(self, login, password):
+        self.login = login
+        self.password = password      
+        self.browser = None
+
+    def do(self, browser = 'firefox', headless=False):
+        options = Options.create(browser).Options()        
+        self.browser = Browser.create(browser).WebDriver(options=options)          
+        try:
+           f = AuthenticationPageUpwork(self.browser)
+           f.getLoginForm()
+           f.fillLoginForm(self.login)
+           f.fillPasswordForm(self.password)
+        except e:
+           logger.error('Authentication fail: {}\n Create screenshot'.format(e))
+           self.browser.save_screenshot('screenshot.png')  
+           self.browser.close()
+        else:
+           logging.info('Authentication done. Browser running.')
+        
+
+class UpworkJobFeed:
+    def __init__(self, browser):
+        self.browser = browser
+
+    @staticmethod
+    def parse(sections):
+        posts = list()
+        for section in sections:
+           title = section.find_element_by_tag_name('h4').text
+           properties = section.find_element_by_tag_name('small').text
+           description = section.find_element_by_xpath('//div[@data-job-description]').text
+           posts.append(dict(title = title, properties = properties, description=description))
+
+        return posts
+
+
+    def search(self, text):  
         elem = self.browser.find_element_by_id('search-box-el')
         elem.clear()
-        elem.send_keys(name)
+        elem.send_keys(text)
         elem.submit()
 
     def grapJobFeed(self):
         return self.browser.find_elements_by_tag_name('section')
 
-
     def setJobsPerPage(self):
         """[10, 20, 50]
-        """ 
+        """         
         elem = self.browser.find_element_by_tag_name('data-eo-select')
-        elem.click()
-        selects = elem.find_elements_by_class_name('ng-binding')
-        selects[3].click()         
-
-
-
-class BrowserContext:
-    def __init__(self, name='firefox', headless=False):
-        options = Options.create(name).Options()
-        options.headless = headless
-        self.browser = Browser.create(name).WebDriver(options=options)       
-
-
-    def __enter__(self):
-        return self.browser
-
-
-    def __exit__(self, exc_type, exc_val, exc_tb):       
-        if exc_type:
-            self.browser.save_screenshot('screenshot.png')
-            logger.error('{}{}{}'.format(exc_type, exc_val, exc_tb))
-        
-        self.browser.close()       
-        logger.info('Browser close.')
-
-
-class Authentication:
-    def __init__(self, login, password):
-        self.login = login
-        self.password = password  
-
-    def do(self, browser = 'firefox', headless=False):        
-        with BrowserContext(browser, headless) as w:
-            f = AuthenticationPageUpwork(w)
-            f.getLoginForm()
-            f.fillLoginForm(self.login)
-            f.fillPasswordForm(self.password)     
-            time.sleep(5)
-            f.search('python')
-            time.sleep(5)
-            f.setJobsPerPage()
-            time.sleep(10)
-            for job in f.grapJobFeed():
-                jobs = JobFeed.parse(job)
+        if elem.text != '50':
+           elem.click()
+           selects = elem.find_elements_by_class_name('ng-binding')
+           selects[3].click() 
+           time.sleep(5)
 
 
 if __name__ == '__main__':
-    a = Authentication('shuric80@gmail.com', 'Volgograd3')
-    a.do( headless = False)
 
-    sys.stdout.write('Done. Jobs: {}'.format(len(a.jobs)))
+    login = input('Login [%s]:' % getpass.getuser())
+    password = getpass.getpass('Password:')    
+    a = UpworkAuthentication(login, password)
+    a.do()
+    page = UpworkJobFeed(a.browser)
+    time.sleep(5)    
+    page.search('')
+    time.sleep(5)
+    page.setJobsPerPage()
+    while True:
+        q = input('Search: ')
+        page.search(q)
+        time.sleep(5)  
+        sections = page.grapJobFeed()        
+        posts = UpworkJobFeed.parse(sections)      
+
+        with open('results.csv', 'w', newline='') as f:
+            fieldnames = ['title', 'properties', 'description']
+            writer = csv.DictWriter(f, fieldnames)
+            writer.writeheader()
+            writer.writerows(posts)
+
+        sys.stdout.write('Done. Find jobs: {}\n'.format(len(posts)))
