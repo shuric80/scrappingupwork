@@ -1,12 +1,14 @@
+import sys
+import time
 import logging
 from importlib import import_module
 import importlib.util
-import pickle
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import  WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.keys import Keys
 
 
 FORMAT = '%(asctime)-15s %(clientip)s %(user)-8s %(message)s'
@@ -45,6 +47,13 @@ class Options:
         return options
 
 
+class JobFeed:
+    @staticmethod
+    def parse(section):
+        title = section.find_element_by_tag_name('h4').text
+        properties = section.find_element_by_tag_name('small').text
+        return dict(title = title, properties = properties)
+
 
 class AuthenticationPageUpwork:
     def __init__(self, browser):
@@ -79,6 +88,26 @@ class AuthenticationPageUpwork:
         logger.debug('Password send.')
 
 
+    def search(self, name):
+        elem = self.browser.find_element_by_id('search-box-el')
+        elem.clear()
+        elem.send_keys(name)
+        elem.submit()
+
+    def grapJobFeed(self):
+        return self.browser.find_elements_by_tag_name('section')
+
+
+    def setJobsPerPage(self):
+        """[10, 20, 50]
+        """ 
+        elem = self.browser.find_element_by_tag_name('data-eo-select')
+        elem.click()
+        selects = elem.find_elements_by_class_name('ng-binding')
+        selects[3].click()         
+
+
+
 class BrowserContext:
     def __init__(self, name='firefox', headless=False):
         options = Options.create(name).Options()
@@ -95,26 +124,32 @@ class BrowserContext:
             self.browser.save_screenshot('screenshot.png')
             logger.error('{}{}{}'.format(exc_type, exc_val, exc_tb))
         
-        self.browser.quit()       
+        self.browser.close()       
         logger.info('Browser close.')
 
 
 class Authentication:
     def __init__(self, login, password):
         self.login = login
-        self.password = password
-        self.cookies = None     
-
+        self.password = password  
 
     def do(self, browser = 'firefox', headless=False):        
         with BrowserContext(browser, headless) as w:
             f = AuthenticationPageUpwork(w)
             f.getLoginForm()
             f.fillLoginForm(self.login)
-            f.fillPasswordForm(self.password)
-            self.cookies = w.get_cookies()
+            f.fillPasswordForm(self.password)     
+            time.sleep(5)
+            f.search('python')
+            time.sleep(5)
+            f.setJobsPerPage()
+            time.sleep(10)
+            for job in f.grapJobFeed():
+                jobs = JobFeed.parse(job)
 
 
-    def saveCookies(self):
-        with open('cookies.pl', 'wb') as f:
-            pickle.dump(self.cookies, f)
+if __name__ == '__main__':
+    a = Authentication('shuric80@gmail.com', 'Volgograd3')
+    a.do( headless = False)
+
+    sys.stdout.write('Done. Jobs: {}'.format(len(a.jobs)))
