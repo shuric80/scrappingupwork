@@ -1,6 +1,7 @@
 import logging
 from datetime import datetime
 from sqlalchemy.orm import sessionmaker
+
 from model import Post, WordSearch, PType,  Base, create_engine
 
 
@@ -39,18 +40,20 @@ def addWordsSearch(word):
 
 
 def createDBPost(post):
-    dbpost = Post(post.title,
-                   post.url,
-                   PType(post.ptype),
-                   post.tier,
-                   post.duration,
-                   datetime.strptime(post.posted_time, '%Y-%m-%dT%H:%M:%S%z'),
-                   post.tags,
-                   post.description,
-                   post.proposal,
-                   'Payment verified' == post.payment,
-                   post.spent,
-                   post.location)
+    dbpost = Post()
+
+    dbpost.title = post.title
+    dbpost.url = post.url
+    dbpost.ptype = PType(post.ptype)
+    dbpost.tier = post.tier
+    dbpost.duration = post.duration
+    dbpost.posted_time = datetime.strptime(post.posted_time, '%Y-%m-%dT%H:%M:%S%z')
+    #dbpost.tags = post.tags
+    dbpost.description = post.description
+    dbpost.proposal = post.proposal
+    dbpost.payment = 'Payment verified' == post.verified
+    #dbpost.spent = post.spent
+    dbpost.location = post.location
 
     return dbpost
 
@@ -58,16 +61,17 @@ def createDBPost(post):
 def createOrSkip(session, post, word):
     instance = session.query(Post).filter_by(url=post.url).first()
     if not instance:
-        word_db = session.query(WordSearch).filter_id(text=post.word).first()
+        word_db = session.query(WordSearch).filter_by(text=word).first()
         dbpost = createDBPost(post)
         dbpost.word = word_db
-
         session.add(dbpost)
+
     else:
         logger.debug('Post skipped: {}'.format(post))
 
 
 def addPosts(posts, word):
+    logger.info('Posts saving in database: {}'.format(len(posts)))
     session = createSession()
 
     for post in posts:
@@ -75,16 +79,33 @@ def addPosts(posts, word):
 
     try:
         session.commit()
+        logger.info('Database commit.')
     except:
         session.rollback()
         logger.critical('Database roolback')
 
-    finally:
-        session.close()
-        logger.debug('Database closed.')
+    session.close()
+    logger.debug('Database closed.')
 
 
 def getWordsSearch():
+    logger.debug('Get search worlds.')
     session = createSession()
     word_db = session.query(WordSearch).all()
     return [w.text for w in word_db]
+
+def serializePost(post):
+    return dict([(key, value) for key, value in post.__dict__.items()
+                 if not key.startswith('_')])
+
+
+def getAllPosts():
+
+    session = createSession()
+    posts = dict()
+    words = session.query(WordSearch).all()
+    for word in words:
+        posts[word] = session.query(Post).filter_by(word=word).all()
+
+    session.close()
+    return posts

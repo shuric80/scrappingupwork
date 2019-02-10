@@ -2,15 +2,15 @@ import enum
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
-from sqlalchemy.orm import relationship
-from sqlalchemy.orm import backref
+from sqlalchemy.orm import relationship, backref
+
 
 Base = declarative_base()
 
 
 class PType(enum.Enum):
     HOURLY = 'Hourly'
-    FIX = 'FixedPrice'
+    FIX = 'Fixed-price'
 
 
 class WordSearch(Base):
@@ -41,7 +41,6 @@ class Post(Base):
     location = Column("Location client", String)
 
     word_id = Column(Integer, ForeignKey('word.id'))
-
 
     def save(self):
         pass
