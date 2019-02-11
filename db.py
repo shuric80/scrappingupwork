@@ -94,18 +94,9 @@ def getWordsSearch():
     word_db = session.query(WordSearch).all()
     return [w.text for w in word_db]
 
-def serializePost(post):
-    return dict([(key, value) for key, value in post.__dict__.items()
-                 if not key.startswith('_')])
-
 
 def getAllPosts():
     session = createSession()
-    posts = dict()
-    words = session.query(WordSearch).all()
-    for word in words:
-        posts[word] = session.query(Post).filter_by(word=word).all()
-
-    print(posts)
+    posts = session.query(Post).all()
     session.close()
     return posts
