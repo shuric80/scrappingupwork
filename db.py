@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from model import Post, WordSearch, PType,  Base, create_engine
 
 
-engine = create_engine('sqlite:///base.db', echo = True)
+engine = create_engine('sqlite:///base.db', echo = False)
 
 FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 logging.basicConfig(format=FORMAT)
@@ -100,12 +100,12 @@ def serializePost(post):
 
 
 def getAllPosts():
-
     session = createSession()
     posts = dict()
     words = session.query(WordSearch).all()
     for word in words:
         posts[word] = session.query(Post).filter_by(word=word).all()
 
+    print(posts)
     session.close()
     return posts
