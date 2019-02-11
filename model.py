@@ -42,8 +42,8 @@ class Post(Base):
 
     word_id = Column(Integer, ForeignKey('word.id'))
 
-    def save(self):
-        pass
+    def to_json(self):
+        return dict((name, str(value)) for name, value in self.__dict__.items() if not name.startswith('_'))
 
     def __repr__(self):
         return '<Post:{}>'.format(self.title)
