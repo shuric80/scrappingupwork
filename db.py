@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from model import Post, WordSearch, PType,  Base, create_engine
 
 
-engine = create_engine('sqlite:///base.db', echo = False)
+engine = create_engine('sqlite:///base.db', echo = True)
 
 FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 logging.basicConfig(format=FORMAT)
@@ -45,15 +45,16 @@ def createDBPost(post):
     dbpost.title = post.title
     dbpost.url = post.url
     dbpost.ptype = PType(post.ptype)
-    dbpost.tier = post.tier
+    #dbpost.tier = post.tier
     dbpost.duration = post.duration
     dbpost.posted_time = datetime.strptime(post.posted_time, '%Y-%m-%dT%H:%M:%S%z')
     #dbpost.tags = post.tags
     dbpost.description = post.description
     dbpost.proposal = post.proposal
     dbpost.payment = 'Payment verified' == post.verified
-    #dbpost.spent = post.spent
+    dbpost.spent = post.spent
     dbpost.location = post.location
+    dbpost.feedback = post.feedback
 
     return dbpost
 

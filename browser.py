@@ -40,15 +40,16 @@ class Post:
         self.title = section.find_element_by_xpath('.//h4[@data-job-title]').text
         self.url = section.find_element_by_xpath('.//a[@data-ng-href]').get_attribute('href')
         self.ptype = section.find_element_by_xpath('.//span[@data-job-type]').text
-        self.tier = section.find_element_by_xpath('.//span[@data-job-tier]').text
+        #self.tier = section.find_element_by_xpath('.//span[@data-job-tier]').text
         self.duration = section.find_element_by_xpath('.//span[@data-job-duration]').text
         self.posted_time = section.find_element_by_xpath('.//time').get_attribute('datetime')
         #self.tags = section.find_element_by_xpath('.//span[@data-job-sands-attrs]').text
         self.description = section.find_element_by_xpath('.//div[@data-job-description]').text
         self.proposal = section.find_element_by_xpath('.//span[@data-job-proposals]').text
         self.verified = section.find_element_by_xpath('.//span[@data-job-client-payment-verified]').text
-        #self.tier = section.find_element_by_xpath('.//span[@data-job-client-spent-tier]').text
+        self.spent = section.find_element_by_xpath('.//span[@data-job-client-spent-tier]').text
         self.location = section.find_element_by_xpath('.//span[@data-job-client-location]').text
+        self.feedback = section.find_element_by_xpath('.//span[@data-eo-rating]').get_attribute('data-eo-popover-html-unsafe')
 
     def __repr__(self):
         return '<Post:{}>'.format(self.title)
@@ -173,7 +174,7 @@ class UpworkProcess:
     @staticmethod
     def fillForm(elem, text, ex=0.8):
         for w in text:
-            timeout = random.gauss(ex, ex*0.2)
+            timeout = random.gauss(ex, ex*0.4)
             if not timeout > 0:
                 timeout = ex
 
@@ -194,6 +195,7 @@ class UpworkProcess:
         #self.driver.wait.until(EC.visibility_of_element_located((By.TAG_NAME, 'section')))
         sections = self.driver.find_elements_by_tag_name('section')
         return sections
+
 
     def run(self, headless=True):
         with DriverConn('firefox', headless) as self.driver:
@@ -223,6 +225,12 @@ class UpworkProcess:
             db.addPosts(posts, word)
             logger.debug('Count found posts: {}'.format(len(posts)))
 
+@app.task
+def start():
+    up = UpworkProcess()
+    up.run(headless=True)
+
+
 
 if __name__ == '__main__':
 
@@ -237,5 +245,4 @@ if __name__ == '__main__':
             db.addWordsSearch(w)
 
     elif sys.argv[1] == 'start':
-        up = UpworkProcess()
-        up.run(headless=headless)
+        start()

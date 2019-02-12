@@ -39,6 +39,7 @@ class Post(Base):
     payment = Column('Payment verified', Boolean)
     spent = Column(String)
     location = Column("Location client", String)
+    feedback = Column("Feedback", String)
 
     word_id = Column(Integer, ForeignKey('word.id'))
 

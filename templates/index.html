@@ -1,19 +1,19 @@
 <html>
   <!DOCTYPE HTML>
   <title>Upwork</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </link>
-<body>
+  <body>
+
   {% for post in posts %}
     <div class="post">
-      <h3 class="title">{{ post.title }}</h3>
-      <p class="property">{{ post.ptype }} {{ post.tier }} {{ post.duration }} {{ post.posted_time }}</p>
-      <div class="description">{{ post.description }}
+      <a href={{ post.url }}><h3 class="title">{{ post.title }}</h3></a>
+      <p class="property">{{ post.ptype }} {{ post.duration }} Posted time:{{ post.posted_time }}</p>
+      <div class="description">{{ post.description }}</div>
+      <p class="proposal">{{ post.proposal }}</p>
+      <p>Spent:{{ post.spent }}    Raiting:{{ post.feedback }}
+        {% if "post.payment" %} Payment verified{% endif %} <span>location:{{ post.location }}<span></p>
       </div>
-      <p class="bottom">{{ post.proposal }} {% if "post.payment" %} Payment verified{% endif %} <span>location:{{ post.location }}<span></p>
-      </div>
-
-
     {% endfor %}
 
 </body>
