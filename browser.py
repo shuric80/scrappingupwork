@@ -16,7 +16,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import  WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 import db
 
@@ -32,27 +32,40 @@ URL_LOGIN = 'https://www.upwork.com/ab/account-security/login'
 URL_FIND = 'https://www.upwork.com/ab/find-work'
 TIMEOUT = 5
 
+POST_FIELDS_PATTERN = dict(
+    title='.//h4[@data-job-title]',
+    url='.//a[@data-ng-href]',
+    ptype='.//span[@data-job-type]',
+    duration='.//span[@data-job-duration]',
+    posted_time='.//time',
+    tags='.//span[@data-job-sands-attrs]',
+    description='.//div[@data-job-description]',
+    proposal='.//span[@data-job-proposals]',
+    verified='.//span[@data-job-client-payment-verified]',
+    spent='.//span[@data-job-client-spent-tier]',
+    location='.//span[@data-job-client-location]',
+    feedback='.//span[@data-eo-rating]')
+#.get_attribute('data-eo-popover-html-unsafe')
+
 
 class Post:
     """storage job post
       """
-    def __init__(self, section):
-        self.title = section.find_element_by_xpath('.//h4[@data-job-title]').text
-        self.url = section.find_element_by_xpath('.//a[@data-ng-href]').get_attribute('href')
-        self.ptype = section.find_element_by_xpath('.//span[@data-job-type]').text
-        #self.tier = section.find_element_by_xpath('.//span[@data-job-tier]').text
-        self.duration = section.find_element_by_xpath('.//span[@data-job-duration]').text
-        self.posted_time = section.find_element_by_xpath('.//time').get_attribute('datetime')
-        #self.tags = section.find_element_by_xpath('.//span[@data-job-sands-attrs]').text
-        self.description = section.find_element_by_xpath('.//div[@data-job-description]').text
-        self.proposal = section.find_element_by_xpath('.//span[@data-job-proposals]').text
-        self.verified = section.find_element_by_xpath('.//span[@data-job-client-payment-verified]').text
-        self.spent = section.find_element_by_xpath('.//span[@data-job-client-spent-tier]').text
-        self.location = section.find_element_by_xpath('.//span[@data-job-client-location]').text
-        self.feedback = section.find_element_by_xpath('.//span[@data-eo-rating]').get_attribute('data-eo-popover-html-unsafe')
+    @classmethod
+    def parse(cls, section):
+        for name, pattern in POST_FIELDS_PATTERN.items():
+            try:
+                elem = section.find_element_by_xpath(pattern)
+            except NoSuchElementException as e:
+                elem = None
+                logger.error('No such element:{}'.format(name))
+            finally:
+                setattr(cls, name, elem)
+
+        return cls
 
     def __repr__(self):
-        return '<Post:{}>'.format(self.title)
+        return getattr(self, 'title')
 
 
 
