@@ -63,8 +63,16 @@ class Post:
                 elem = None
                 logger.error('No such element:{}'.format(name))
             finally:
-                setattr(post, name, elem)
-
+                if name == 'url':
+                    setattr(post, name, elem.get_attribute('text'))
+                elif name == 'posted_time':
+                    setattr(post, name, elem.get_attribute('datetime'))
+                elif name == 'feedback':
+                    setattr(post, name, elem.get_attribute('data-eo-popover-html-unsafe'))
+                elif hasattr(elem, 'text'):
+                    setattr(post, name, elem.text)
+                else:
+                    pass
         return post
 
 
@@ -243,12 +251,12 @@ class UpworkProcess:
             posts = list()
             for section in sections:
                 post = Post.parse(section)
-                logger.debug(post.title.text)
+                logger.debug(post.title)
                 posts.append(post)
 
-            #db.addPosts(post, word)
+            db.addPosts(posts, word)
             logger.debug('Count found posts: {}'.format(len(posts)))
 
 
 if __name__ == '__main__':
-        UpworkProcess.run(headless=False)
+        UpworkProcess.run(headless=True)

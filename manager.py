@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask import render_template
 
+from browser import UpworkProcess
 import db
 
 app = Flask(__name__)
