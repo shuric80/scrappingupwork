@@ -13,8 +13,18 @@ def index():
 
 
 @app.route('/api/v1/posts')
-def api():
+def api_posts_all():
     posts = db.getAllPosts()
+    return jsonify(posts)
+
+@app.route('/api/v1/words')
+def api_words_all():
+    words = db.getWordsSearch()
+    return jsonify(words)
+
+@app.route('/api/v1/filter/posts/<word>')
+def api_filter_posts_word(word):
+    posts = db.filterPostsWord(word)
     return jsonify(posts)
 
 

@@ -101,3 +101,8 @@ def getAllPosts():
     posts = session.query(Post).all()
     session.close()
     return [post.to_json() for post in posts]
+
+def filterPostsWord(w):
+    session = createSession()
+    posts = session.query(Post, WordSearch).filter(Post.word_id == WordSearch.id).filter(WordSearch.text == w).all()
+    return [post.to_json() for post, word in posts]

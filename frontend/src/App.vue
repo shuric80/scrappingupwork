@@ -6,10 +6,11 @@
         <span class="font-weight-light">Project</span>
       </v-toolbar-title>
     <v-spacer />
-    <v-btn @click="filter">filter</v-btn>
-    </v-toolbar>
+    <v-btn @click="sortDatetime">sort date</v-btn>
+    <v-btn v-for="word in words" @click="filterWord(word)">{{word}}</v-btn>
+     </v-toolbar>
     <v-layout  align-center justify-center column>
-    <v-card v-for="post in posts" :href="post.url" style="max-width:800px">
+    <v-card v-for="post in posts" @click="post.is_look != post.is_look" :style="stylePost(post.is_look)">
     <v-card-title class="title">{{ post.title }}</v-card-title>
     <v-card-text><p><span class="type">{{ post.ptype.split('.')[1]}}</span><span class="duration"> {{ post.duration}}</span><span class="posted_time">{{ post.posted_time}}</span></p>
                                    <div class="description">{{post.description}}</div>
@@ -33,10 +34,34 @@ export default {
     name: 'App',
     created: function(){
         axios.get('http://localhost:5000/api/v1/posts').then( o => this.posts = o.data).catch(e => console.error(e));
+        axios.get('http://localhost:5000/api/v1/words').then( o => this.words = o.data).catch(e => console.error(e));
+    },
+    methods:{
+        sortDate: function(){
+            //this.posts = this.posts.sort(o => )
+        },
+        //sortedTms: function(a,b){
+        //    if a
+       // }
+        .
+        filter: function(){
+            axios.get('http://localhost:5000/api/v1/')
+
+        },
+        filterWord: function(w){
+            axios.get('http://localhost:5000/api/v1/filter/posts/' + w).then( o => this.posts = o.data).catch(e => console.error(e));
+        },
+        stylePost: function(state){
+            return {
+                'max-width': '800px',
+                'min-width':'800px',
+            }
+        }
     },
     data () {
         return {
-            posts:[]
+            posts:[],
+            words: []
             //
         }
     }

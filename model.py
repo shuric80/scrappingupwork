@@ -20,7 +20,8 @@ class WordSearch(Base):
     id = Column(Integer, primary_key=True)
     text = Column("Text", String, unique=True, nullable=False)
 
-    posts = relationship("Post", backref=backref("word", cascade="delete, all"))
+    posts = relationship("Post", backref=backref("word", cascade="delete, all"), lazy="dinamic")
+
 
 class Post(Base):
 
@@ -39,7 +40,7 @@ class Post(Base):
     payment = Column('Payment verified', Boolean)
     spent = Column(String)
     location = Column("Location client", String)
-    feedback = Column("Feedback", String)
+    #feedback = Column("Feedback", String)
 
     word_id = Column(Integer, ForeignKey('word.id'))
 
