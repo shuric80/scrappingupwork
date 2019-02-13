@@ -8,7 +8,8 @@
     <v-spacer />
     </v-toolbar>
     <v-navigation-drawer fixed height="100%" right>
-    <v-list>
+    <v-btn @click="sortDateTime" flat color="green">Sort time</v-btn>
+    <v-list >
     <v-list-tile v-for="word in words">
     <!-- v-list-tile-title>{{word.text}}</v-list-tile-title -->
     <v-checkbox @click="filterWord" v-model="word.state" hide-details color="blue darken-4" :label="word.text"></v-checkbox>
@@ -20,7 +21,7 @@
     <v-card-title class="title">{{ post.title }}</v-card-title>
     <v-card-text>
     <p>
-    <!-- span class="type">{{ post.ptype.split('.')[1]}}</span -->
+    <span class="type">{{ post.ptype.split('.')[1]}}</span>
     <span class="duration"> {{ post.duration}}</span>
     <span class="posted_time">{{ post.posted_time}}</span></p>
                                    <div class="description">{{post.description}}</div>
@@ -61,17 +62,20 @@ export default {
            this.words.forEach(
                 o => {
                     if(o.state === true){
-                        this.model.forEach(v =>{
+                        this.model.forEach(v => {
                             if(parseInt(v.word_id) === o.id){
                                 this.posts.push(v);
                             }
                         })}
                 });
         },
+        sortDateTime: function(){
+            this.posts.sort(function(a,b){ return new Date(b.posted_time).getTime() - new Date(a.posted_time).getTime()});
+        },
         stylePost: function(state){
             return {
-                'max-width': '800px',
-                'min-width':'800px',
+                'max-width': '1200px',
+                'min-width':'1200px',
             }
         }
     },
