@@ -100,4 +100,4 @@ def getAllPosts():
     session = createSession()
     posts = session.query(Post).all()
     session.close()
-    return posts
+    return [post.to_json() for post in posts]
