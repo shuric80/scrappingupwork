@@ -6,12 +6,23 @@
         <span class="font-weight-light">Project</span>
       </v-toolbar-title>
     <v-spacer />
-    <v-btn v-for="word in words" @click="filterWord(word)">{{word.text}}</v-btn>
-     </v-toolbar>
+    </v-toolbar>
+    <v-navigation-drawer fixed height="100%" right>
+    <v-list>
+    <v-list-tile v-for="word in words">
+    <!-- v-list-tile-title>{{word.text}}</v-list-tile-title -->
+    <v-checkbox @click="filterWord" v-model="word.state" hide-details color="blue darken-4" :label="word.text"></v-checkbox>
+    </v-list-tile>
+    </v-list>
+    </v-navigation-drawer>
     <v-layout  align-center justify-center column>
     <v-card v-for="post in posts" @click="post.is_look != post.is_look" :style="stylePost(post.is_look)">
     <v-card-title class="title">{{ post.title }}</v-card-title>
-    <v-card-text><p><span class="type">{{ post.ptype.split('.')[1]}}</span><span class="duration"> {{ post.duration}}</span><span class="posted_time">{{ post.posted_time}}</span></p>
+    <v-card-text>
+    <p>
+    <!-- span class="type">{{ post.ptype.split('.')[1]}}</span -->
+    <span class="duration"> {{ post.duration}}</span>
+    <span class="posted_time">{{ post.posted_time}}</span></p>
                                    <div class="description">{{post.description}}</div>
     <p>
       <span class="verifyed" v-if="post.payment">Payment verified</span>
@@ -33,12 +44,29 @@ export default {
     name: 'App',
     created: function(){
         axios.get('http://localhost:5000/api/v1/posts').then( o => { this.model = o.data; this.posts = this.model}).catch(e => console.error(e));
-        axios.get('http://localhost:5000/api/v1/words').then( o => this.words = o.data).catch(e => console.error(e));
+        axios.get('http://localhost:5000/api/v1/words').then( o => this.initWords(o.data)).catch(e => console.error(e));
     },
     methods:{
-
-        filterWord: function(w){
-            this.posts = this.model.filter(o => parseInt(o.word_id) === w.id);
+        initWords: function(words){
+            words.forEach(o => {
+                this.words.push({
+                    id: o.id,
+                    text: o.text,
+                    state: true
+                })
+            })
+        },
+        filterWord: function(){
+            this.posts =[];
+           this.words.forEach(
+                o => {
+                    if(o.state === true){
+                        this.model.forEach(v =>{
+                            if(parseInt(v.word_id) === o.id){
+                                this.posts.push(v);
+                            }
+                        })}
+                });
         },
         stylePost: function(state){
             return {
