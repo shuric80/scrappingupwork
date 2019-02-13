@@ -20,7 +20,7 @@ class WordSearch(Base):
     id = Column(Integer, primary_key=True)
     text = Column("Text", String, unique=True, nullable=False)
 
-    posts = relationship("Post", backref=backref("word", cascade="delete, all"), lazy="dinamic")
+    posts = relationship("Post", backref=backref("word", cascade="delete, all"), lazy="dynamic")
 
 
 class Post(Base):

@@ -22,12 +22,6 @@ def api_words_all():
     words = db.getWordsSearch()
     return jsonify(words)
 
-@app.route('/api/v1/filter/posts/<word>')
-def api_filter_posts_word(word):
-    posts = db.filterPostsWord(word)
-    return jsonify(posts)
-
-
 
 if __name__ ==  '__main__':
     app.run(debug=True)

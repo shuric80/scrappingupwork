@@ -93,7 +93,7 @@ def getWordsSearch():
     logger.debug('Get search worlds.')
     session = createSession()
     word_db = session.query(WordSearch).all()
-    return [w.text for w in word_db]
+    return [dict(text=w.text, id=w.id) for w in word_db]
 
 
 def getAllPosts():
@@ -101,8 +101,3 @@ def getAllPosts():
     posts = session.query(Post).all()
     session.close()
     return [post.to_json() for post in posts]
-
-def filterPostsWord(w):
-    session = createSession()
-    posts = session.query(Post, WordSearch).filter(Post.word_id == WordSearch.id).filter(WordSearch.text == w).all()
-    return [post.to_json() for post, word in posts]

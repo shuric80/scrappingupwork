@@ -6,8 +6,7 @@
         <span class="font-weight-light">Project</span>
       </v-toolbar-title>
     <v-spacer />
-    <v-btn @click="sortDatetime">sort date</v-btn>
-    <v-btn v-for="word in words" @click="filterWord(word)">{{word}}</v-btn>
+    <v-btn v-for="word in words" @click="filterWord(word)">{{word.text}}</v-btn>
      </v-toolbar>
     <v-layout  align-center justify-center column>
     <v-card v-for="post in posts" @click="post.is_look != post.is_look" :style="stylePost(post.is_look)">
@@ -33,23 +32,13 @@ import axios from 'axios'
 export default {
     name: 'App',
     created: function(){
-        axios.get('http://localhost:5000/api/v1/posts').then( o => this.posts = o.data).catch(e => console.error(e));
+        axios.get('http://localhost:5000/api/v1/posts').then( o => { this.model = o.data; this.posts = this.model}).catch(e => console.error(e));
         axios.get('http://localhost:5000/api/v1/words').then( o => this.words = o.data).catch(e => console.error(e));
     },
     methods:{
-        sortDate: function(){
-            //this.posts = this.posts.sort(o => )
-        },
-        //sortedTms: function(a,b){
-        //    if a
-       // }
-        .
-        filter: function(){
-            axios.get('http://localhost:5000/api/v1/')
 
-        },
         filterWord: function(w){
-            axios.get('http://localhost:5000/api/v1/filter/posts/' + w).then( o => this.posts = o.data).catch(e => console.error(e));
+            this.posts = this.model.filter(o => parseInt(o.word_id) === w.id);
         },
         stylePost: function(state){
             return {
@@ -60,6 +49,7 @@ export default {
     },
     data () {
         return {
+            model:[],
             posts:[],
             words: []
             //
