@@ -1,11 +1,18 @@
 import os
+import sys
 from flask import Flask, jsonify, redirect
 from flask import render_template
+from celery import Celery
+import subprocess
 
 from browser import UpworkProcess
 import db
 
 app = Flask(__name__, static_folder="frontend/dist", static_url_path="", template_folder="frontend/dist")
+
+celery = Celery(__name__, backend='amqp', broker='amqp://')
+celery.config_from_object('config')
+
 
 @app.route('/')
 def index():
@@ -23,5 +30,22 @@ def api_words_all():
     return jsonify(words)
 
 
+@celery.task
+def periodic_task():
+    UpworkProcess.run()
+
+
 if __name__ ==  '__main__':
-    app.run(debug=True)
+    if sys.argv[1] == "create":
+        db.createDB()
+    elif sys.argv[1] == 'add':
+        for w in sys.argv[2:]:
+            db.addWordsSearch(w)
+    elif sys.argv[1] == 'runserver':
+        app.run(debug=True)
+
+    elif sys.argv[1] == 'parse':
+        UpworkProcess.run()
+
+    elif sys.argv[1] == 'start':
+        subprocess.Popen("celery -A manager.celery worker --beat --loglevel=info")
