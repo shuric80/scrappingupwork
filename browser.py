@@ -245,8 +245,8 @@ class UpworkProcess:
         time.sleep(1)
         self._page.selectJobsPerPage()
         for word in db.getWordsSearch():
-            logger.info('Download page: Key word: {}'.format(word))
-            self._page.getJobFeed(word)
+            logger.info('Download page: Key word: {}'.format(word['text']))
+            self._page.getJobFeed(word['text'])
             sections = self._page.parseJobFeed(word)
             posts = list()
             for section in sections:
@@ -254,7 +254,7 @@ class UpworkProcess:
                 logger.debug(post.title)
                 posts.append(post)
 
-            db.addPosts(posts, word)
+            db.addPosts(posts, word['text'])
             logger.debug('Count found posts: {}'.format(len(posts)))
 
 
