@@ -1,0 +1,1244 @@
+1550119292454	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0JJICJIuvssn"
+*** You are running in headless mode.
+1550119294435	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550119294436	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550119301352	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.BUUi7rKlF8c3"
+*** You are running in headless mode.
+1550119302804	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550119302804	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550119310235	Marionette	INFO	Listening on port 44047
+1550119310320	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 9458, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1550721481011	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KWCupGJcJmaE"
+*** You are running in headless mode.
+1550721485386	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550721485387	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550721491817	Marionette	INFO	Listening on port 43109
+1550721491841	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1550721533610	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.AnFlXKkbM8gw"
+*** You are running in headless mode.
+1550721534184	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550721534184	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550721537798	Marionette	INFO	Listening on port 34913
+1550721537832	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1550721602719	Marionette	INFO	Stopped listening on port 34913
+1550721641307	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0N1UM0uich6C"
+*** You are running in headless mode.
+1550721641882	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550721641882	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550721645740	Marionette	INFO	Listening on port 45237
+1550721645843	Marionette	WARN	TLS certificate errors will be ignored for this session
+1550721649503	Marionette	INFO	Stopped listening on port 45237
+[Parent 6734, Gecko_IOThread] WARNING: pipe error (74): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1550721678174	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.q7eQHA6rSKkK"
+*** You are running in headless mode.
+1550721678745	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550721678745	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550721682252	Marionette	INFO	Listening on port 42485
+1550721682311	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1550721818018	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.o4dLTEkx2MhU"
+*** You are running in headless mode.
+1550721818613	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550721818613	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550721822351	Marionette	INFO	Listening on port 39727
+1550721822437	Marionette	WARN	TLS certificate errors will be ignored for this session
+1550721826064	Marionette	INFO	Stopped listening on port 39727
+[Parent 22936, Gecko_IOThread] WARNING: pipe error (74): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1550721865974	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.5L4MyNCFuHSO"
+*** You are running in headless mode.
+1550721866544	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550721866545	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1550721869995	Marionette	INFO	Listening on port 38491
+1550721870101	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+
+(/usr/lib/firefox/firefox:27875): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1550721889207	Marionette	INFO	Stopped listening on port 38491
+JavaScript error: jar:file:///usr/lib/firefox/browser/omni.ja!/components/nsBrowserGlue.js, line 1393: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIAppShellService.hiddenDOMWindow]
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+1550721918311	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.nBnGnEkBQiG6"
+Xlib:  extension "GLX" missing on display ":0.0".
+1550721918991	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550721918991	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1550721923077	Marionette	INFO	Listening on port 37825
+1550721923156	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/toolbox.js, line 1273: TypeError: currentPanel is undefined
+
+(/usr/lib/firefox/firefox:32765): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1550721938611	Marionette	INFO	Stopped listening on port 37825
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 32765, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1550722224689	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.FGZvQBUArawc"
+Xlib:  extension "GLX" missing on display ":0.0".
+1550722225385	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550722225385	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1550722229202	Marionette	INFO	Listening on port 46190
+1550722229217	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:28059): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1550722249335	Marionette	INFO	Stopped listening on port 46190
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 58: TypeError: this.mm.content is null
+[Parent 27738, Gecko_IOThread] WARNING: pipe error (77): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1550723848747	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0U6aAinTxBrW"
+Xlib:  extension "GLX" missing on display ":0.0".
+1550723849500	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550723849500	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1550723853392	Marionette	INFO	Listening on port 46637
+1550723853474	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:3608): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1550723870226	Marionette	INFO	Stopped listening on port 46637
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x580029,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+1550723925831	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.iDS9TxWN9mle"
+Xlib:  extension "GLX" missing on display ":0.0".
+1550723926515	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1550723926516	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1550723930771	Marionette	INFO	Listening on port 36519
+1550723930850	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:10513): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+Xlib:  extension "GLX" missing on display ":0.0".
+1550724633967	Marionette	INFO	Stopped listening on port 42485
+1550724634590	Marionette	INFO	Stopped listening on port 36519
+1551501244937	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Yq2QzYGtxNIR"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551501247273	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551501247284	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551501254406	Marionette	INFO	Listening on port 41442
+1551501254492	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:9263): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript error: , line 0: NotSupportedError: Operation is not supported
+JavaScript error: , line 0: NotSupportedError: Operation is not supported
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/toolbox.js, line 1273: TypeError: currentPanel is undefined
+1551501952448	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.YcVgr9s3p3qK"
+*** You are running in headless mode.
+1551501959096	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551501959097	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551501971122	Marionette	INFO	Listening on port 34507
+1551501971480	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+
+(/usr/lib/firefox/firefox:13548): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551502038601	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PhOESnwXNpzl"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551502041123	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551502041127	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551502050296	Marionette	INFO	Listening on port 44492
+Xlib:  extension "GLX" missing on display ":0.0".
+1551502050663	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:21715): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+[Parent 20678, Gecko_IOThread] WARNING: pipe error (114): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551502529784	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.f9tFRgy7F0VQ"
+1551502531807	Marionette	INFO	Stopped listening on port 44492
+Xlib:  extension "GLX" missing on display ":0.0".
+1551502537872	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551502537876	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551502554128	Marionette	INFO	Listening on port 35286
+1551502554261	Marionette	WARN	TLS certificate errors will be ignored for this session
+Xlib:  extension "GLX" missing on display ":0.0".
+
+(/usr/lib/firefox/firefox:10168): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+[Parent 6274, Gecko_IOThread] WARNING: pipe error (136): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551502966949	Marionette	INFO	Stopped listening on port 35286
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/layout.js:424:11\ngetGrids@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/layout.js:429:38\nhandler@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:1198:21\nonPacket@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1313:15\nreceiveMessage@resource://devtools/shared/base-loader.js -> resource://devtools/shared/transport/child-transport.js:66:5\n"
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551506339990	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.luPs14KSie1Z"
+Xlib:  extension "GLX" missing on display ":0.0".
+[Parent 8429, Gecko_IOThread] WARNING: pipe error: Broken pipe: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 736
+[Parent 8429, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x4C0013,name=PHttpChannel::Msg_OnStartRequest) Channel error: cannot send/recv
+
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1630: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1630: TypeError: subject.QueryInterface is not a function
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1630: TypeError: subject.QueryInterface is not a function
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1630: TypeError: subject.QueryInterface is not a function
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1551506373830	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551506373832	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionSaver.jsm, line 180: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIAppShellService.hiddenDOMWindow]
+1551506382985	Marionette	INFO	Stopped listening on port 41442
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506396448	Marionette	FATAL	Remote protocol server failed to start: Error: Could not bind to port 42930 (NS_ERROR_SOCKET_ADDRESS_IN_USE)(chrome://marionette/content/server.js:88:17) JS Stack trace: set acceptConnections@server.js:88:17
+start@server.js:119:5
+init/<@marionette.js:459:9
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 29: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+console.error: PushService: 
+  clearOriginData: Error clearing origin data:
+  UnknownError
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  UnknownError
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+1551506430701	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.maGQ2Jjc3P77"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506432049	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551506432051	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506437657	Marionette	INFO	Listening on port 36601
+1551506438346	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:27596): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551506499916	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.1sHx4jAkoZec"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506501074	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551506501083	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551506503373	Marionette	INFO	Stopped listening on port 36601
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506508799	Marionette	INFO	Listening on port 39134
+1551506508970	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:5716): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 5146, Gecko_IOThread] WARNING: pipe error (129): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551506745536	Marionette	INFO	Stopped listening on port 39134
+1551506756757	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.I5NLMauhlsqk"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506757886	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551506757888	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506763239	Marionette	INFO	Listening on port 36436
+1551506763313	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:31322): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+[Parent 30838, Gecko_IOThread] WARNING: pipe error (124): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506840887	Marionette	INFO	Stopped listening on port 36436
+1551506845420	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.lqFZGiPFZlaW"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506846440	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551506846440	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551506852643	Marionette	INFO	Listening on port 38366
+1551506852675	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:8522): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+[Parent 8062, Gecko_IOThread] WARNING: pipe error (126): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551506909126	Marionette	INFO	Stopped listening on port 38366
+1551507093891	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.UsfkZb8htdbH"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507095113	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551507095115	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551507122396	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.jzUNVpc3uLDb"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507123385	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551507123386	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507129266	Marionette	INFO	Listening on port 33001
+1551507129339	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:4632): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 58: TypeError: this.mm.content is null
+[Parent 4213, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 4213, Gecko_IOThread] WARNING: pipe error (128): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551507192898	Marionette	INFO	Stopped listening on port 33001
+1551507196070	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.tpfSLLEKdDe1"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507197184	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551507197186	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507202969	Marionette	INFO	Listening on port 40176
+1551507203035	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:14203): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551507362792	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.bI32GwfgylfR"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507363878	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551507363888	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+[Parent 13632, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 13632, Gecko_IOThread] WARNING: pipe error (118): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551507366487	Marionette	INFO	Stopped listening on port 40176
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507371038	Marionette	INFO	Listening on port 42904
+1551507371104	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:2823): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 58: TypeError: this.mm.content is null
+[Parent 1963, Gecko_IOThread] WARNING: pipe error (110): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507480976	Marionette	INFO	Stopped listening on port 42904
+1551507501955	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KHJhjMzCA2Qb"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507503713	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551507503717	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507511575	Marionette	INFO	Listening on port 45897
+1551507511626	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:25806): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://www.upwork.com/ab/assets/upwork_lib.js?seed=AADj_DxpAQAAlMnM_p7805WVzC-s1Q65rP_Wfp8eODlKsqIJs3R7GasASRex, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+1551507591250	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.sxvv488xW0ys"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507593906	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551507593908	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+[Parent 24878, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 24878, Gecko_IOThread] WARNING: pipe error (125): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551507595065	Marionette	INFO	Stopped listening on port 45897
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551507602679	Marionette	INFO	Listening on port 45666
+1551507602746	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:8617): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Xlib:  extension "GLX" missing on display ":0.0".
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+[Parent 7171, Gecko_IOThread] WARNING: pipe error (115): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508196704	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.xqb6HB3mF2Nk"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508199486	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551508199490	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508210106	Marionette	INFO	Listening on port 41461
+1551508210327	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:16829): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551508353089	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KVlpK6ps024U"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508354453	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551508354467	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+[Parent 15428, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 15428, Gecko_IOThread] WARNING: pipe error (103): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 15428, Gecko_IOThread] WARNING: pipe error (123): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551508356929	Marionette	INFO	Stopped listening on port 41461
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508362653	Marionette	INFO	Listening on port 43448
+1551508362765	Marionette	WARN	TLS certificate errors will be ignored for this session
+1551508368631	Marionette	INFO	Stopped listening on port 45666
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:31557): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551508472972	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.GWSmz7xPpa8G"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508474353	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551508474359	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+[Parent 30886, Gecko_IOThread] WARNING: pipe error (39): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551508476707	Marionette	INFO	Stopped listening on port 43448
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508483079	Marionette	INFO	Listening on port 34399
+1551508483155	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:14733): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551508556715	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.t1JW1mDKENIE"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508558038	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551508558041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508565742	Marionette	INFO	Listening on port 39057
+1551508565814	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:25526): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+[Parent 13923, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 13923, Gecko_IOThread] WARNING: pipe error (121): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551508595157	Marionette	INFO	Stopped listening on port 34399
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/toolbox.js, line 1273: TypeError: currentPanel is undefined
+1551508788313	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.GS57L2JQ7oRt"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508790027	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551508790031	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 24530, Gecko_IOThread] WARNING: pipe error (126): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551508792409	Marionette	INFO	Stopped listening on port 39057
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551508796868	Marionette	INFO	Listening on port 36801
+1551508796979	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:28786): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/toolbox.js, line 1273: TypeError: currentPanel is undefined
+1551509054053	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.NI3SItMoNnrm"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509055135	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551509055137	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509062188	Marionette	INFO	Listening on port 41432
+1551509062397	Marionette	WARN	TLS certificate errors will be ignored for this session
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 27758, Gecko_IOThread] WARNING: pipe error (63): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 27758, Gecko_IOThread] WARNING: pipe error (62): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 27758, Gecko_IOThread] WARNING: pipe error (121): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509064173	Marionette	INFO	Stopped listening on port 36801
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:9684): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551509205316	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.GiTYbCArF6gw"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509214772	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551509214773	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551509232905	Marionette	INFO	Stopped listening on port 41432
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509243731	Marionette	INFO	Listening on port 33881
+1551509244033	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:29096): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551509286629	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.3YtUQYxpM09t"
+Xlib:  extension "GLX" missing on display ":0.0".
+[Parent 26047, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551509288352	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551509288355	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551509288891	Marionette	INFO	Stopped listening on port 33881
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509294852	Marionette	INFO	Listening on port 43021
+1551509294941	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:3244): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551509678618	Marionette	INFO	Stopped listening on port 43021
+1551509680317	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.vULYnJhO4z3e"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509698757	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551509698759	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551509719960	Marionette	INFO	Listening on port 41556
+1551509720129	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:14888): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551509982952	Marionette	INFO	Stopped listening on port 41556
+1551510556730	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2izx0vv9obGG"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551510566138	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551510566139	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551510579531	Marionette	INFO	Listening on port 39970
+1551510579984	Marionette	WARN	TLS certificate errors will be ignored for this session
+Xlib:  extension "GLX" missing on display ":0.0".
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:10894): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551510686614	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.R5Nxemi3ThHe"
+1551510688735	Marionette	INFO	Stopped listening on port 39970
+Xlib:  extension "GLX" missing on display ":0.0".
+1551510699325	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551510699327	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551510711693	Marionette	INFO	Listening on port 37560
+1551510711725	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:25044): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/toolbox.js, line 1273: TypeError: currentPanel is undefined
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1551511200519	Marionette	INFO	Stopped listening on port 37560
+1551511217261	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.mPXqdgJBOgV2"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551511223486	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551511223486	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551511234497	Marionette	INFO	Listening on port 44282
+1551511234602	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:14664): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551511366987	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Gm1icovPB6c1"
+Xlib:  extension "GLX" missing on display ":0.0".
+[Parent 12890, Gecko_IOThread] WARNING: pipe error (87): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551511369611	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551511369613	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551511370026	Marionette	INFO	Stopped listening on port 44282
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551511377962	Marionette	INFO	Listening on port 37566
+1551511378158	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+
+(/usr/lib/firefox/firefox:2233): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551511644121	Marionette	INFO	Stopped listening on port 37566
+1551511732901	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.zbRQGJYmtBac"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551511737566	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551511737569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551511748537	Marionette	INFO	Listening on port 44594
+1551511748733	Marionette	WARN	TLS certificate errors will be ignored for this session
+Xlib:  extension "GLX" missing on display ":0.0".
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:28238): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551512649333	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.9uc4QnFeYX9q"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551512655844	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551512655845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551512670586	Marionette	INFO	Listening on port 44284
+1551512671153	Marionette	WARN	TLS certificate errors will be ignored for this session
+Xlib:  extension "GLX" missing on display ":0.0".
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+
+(/usr/lib/firefox/firefox:2298): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551513988097	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.mh9F2h2BXXp6"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551514000152	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551514000153	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551514033755	Marionette	INFO	Listening on port 43657
+1551514034177	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:15836): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+1551514370793	Marionette	INFO	Stopped listening on port 44594
+[Parent 31601, Gecko_IOThread] WARNING: pipe error (135): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551514376398	Marionette	INFO	Stopped listening on port 44284
+[Parent 10541, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 10541, Gecko_IOThread] WARNING: pipe error (87): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 10541, Gecko_IOThread] WARNING: pipe error (132): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551514379708	Marionette	INFO	Stopped listening on port 43657
+1551514388357	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.W5n9oKBd82g9"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551514394356	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551514394357	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551514404279	Marionette	INFO	Listening on port 42663
+1551514404403	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:24945): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+[Parent 23520, Gecko_IOThread] WARNING: pipe error (69): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 23520, Gecko_IOThread] WARNING: pipe error (116): Connection reset by peer: file /build/firefox-h0evE3/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1551514568265	Marionette	INFO	Stopped listening on port 42663
+1551514575500	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.3LjrHTId96Af"
+Xlib:  extension "GLX" missing on display ":0.0".
+1551514576794	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551514576801	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+Xlib:  extension "GLX" missing on display ":0.0".
+1551514582538	Marionette	INFO	Listening on port 37610
+1551514582674	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Refused to create native OpenGL context because of blacklist entry: 
+JavaScript warning: https://client.perimeterx.net/PXSs13U803/main.min.js, line 3: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Refused to create native OpenGL context because of blacklist entry: 
+* Exhausted GL driver options.
+
+(/usr/lib/firefox/firefox:13782): dconf-WARNING **: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1551515779748	Marionette	INFO	Stopped listening on port 37610

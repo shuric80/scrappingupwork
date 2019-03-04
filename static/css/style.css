@@ -1,0 +1,14 @@
+.post {
+    max-width: 70%;
+    min-width: 70%;
+    margin: auto;
+    background-color: #CCC;
+    padding:  10px;
+    border-bottom: 1px solid black;
+}
+.property {
+    font-weight: 700;
+}
+.proposal {
+    font-weight: 700;
+}
