@@ -33,7 +33,12 @@ class Post(Base):
     ptype = Column('Type', Enum(PType))
     tier = Column(String)
     duration = Column(String)
+<<<<<<< HEAD
+    #posted_time = Column("Created post", DateTime, nullable=False)
+    posted_time = Column("Created post", String)
+=======
     posted_time = Column("Created post", DateTime, nullable=False)
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
     tags = Column(String)
     description = Column("Description post", String)
     proposal = Column(String)

@@ -2,6 +2,10 @@ import sys
 import os
 import time
 import random
+<<<<<<< HEAD
+from random import shuffle
+=======
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
 from datetime import datetime
 import logging
 from importlib import import_module
@@ -33,6 +37,22 @@ URL_FIND = 'https://www.upwork.com/ab/find-work'
 TIMEOUT = 5
 
 POST_FIELDS_PATTERN = dict(
+<<<<<<< HEAD
+    title='.//header',
+    #url='.//a[@data-ng-href]',
+    #ptype=".//strong[text()='Project Type:']/parent::li/span",
+    ptype=".//i[contains(@class,'jobdetails-tier-level-icon')]/parent::li/small",
+    posted_time=".//span[@itemProp='datePosted']",
+    duration=".//ul[@class='job-features p-0']/li",
+    #tags='.//span[@data-job-sands-attrs]',
+    description=".//div[@class='job-description']",
+    proposal=".//h4[text()='Activity on this job']/parent::section/ul/li",
+    #verified='.//span[@data-job-client-payment-verified]',
+    #spent='.//span[@data-job-client-spent-tier]',
+    location='.//span[@data-job-client-location]',
+    feedback=".//span[@itemprop='ratingValue']"
+    )
+=======
     title='.//h4[@data-job-title]',
     url='.//a[@data-ng-href]',
     ptype='.//span[@data-job-type]',
@@ -45,6 +65,7 @@ POST_FIELDS_PATTERN = dict(
     spent='.//span[@data-job-client-spent-tier]',
     location='.//span[@data-job-client-location]',
     feedback='.//span[@data-eo-rating]')
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
 #.get_attribute('data-eo-popover-html-unsafe')
 
 
@@ -52,17 +73,29 @@ class Post:
     """storage job post
       """
     @classmethod
+<<<<<<< HEAD
+    def parse(cls, section, url):
+        """ create post storage
+         """
+        post = cls()
+        post.url = url
+=======
     def parse(cls, section):
         """ create post storage
          """
         post = cls()
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
         for name, pattern in POST_FIELDS_PATTERN.items():
             try:
                 elem = section.find_element_by_xpath(pattern)
             except NoSuchElementException as e:
                 elem = None
                 logger.error('No such element:{}'.format(name))
+<<<<<<< HEAD
+            else:
+=======
             finally:
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
                 if name == 'url':
                     setattr(post, name, elem.get_attribute('text'))
                 elif name == 'posted_time':
@@ -115,7 +148,11 @@ class DriverConn:
     def __exit__(self, exc_type, exc_val, exc_tb):
         if exc_val:
             self.driver.save_screenshot('logs/screenshot_{}.png'.format(datetime.now()))
+<<<<<<< HEAD
+            #self.driver.close()
+=======
             self.driver.close()
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
             raise Exception('{}:{}'.format(exc_type, exc_val))
 
 
@@ -148,6 +185,13 @@ class UpworkPage:
     def __init__(self):
         self._driver =None
 
+<<<<<<< HEAD
+    def getUrls(self):
+        urls = [url.get_attribute('href') for url in self._driver.find_elements_by_xpath(".//h4[contains(@class,'job-title')]/a")]
+        return urls
+
+=======
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
     def setDriver(self, driver):
         self._driver = driver
 
@@ -183,11 +227,25 @@ class UpworkPage:
         select.find_elements_by_tag_name('li')[2].click()
 
     def getJobFeed(self, text):
+<<<<<<< HEAD
+        #elem = self._driver.find_element_by_xpath(".//button[@class='btn p-xs-left-right dropdown-toggle']").click()
+        #elem = self._driver.find_elements_by_tag_name(".//input[@data-qa='ee-input']")
+        #elem.clear()
+        #search_box = self._driver.wait.until(EC.presence_of_element_located((By.ID, 'search-box-el')))
+        #search_box.clear()
+        elem = self._driver.find_element_by_id('search-box-el')
+        time.sleep(1)
+        self.fillForm(elem, text)
+        time.sleep(1)
+        #elem.submit()
+        self._driver.find_element_by_xpath(".//button[@class='btn btn-primary']").click()
+=======
         search_box = self._driver.wait.until(EC.presence_of_element_located((By.ID, 'search-box-el')))
         search_box.clear()
         time.sleep(1)
         self.fillForm(search_box, text)
         search_box.submit()
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
 
     def parseJobFeed(self, word):
         time.sleep(TIMEOUT)
@@ -203,6 +261,12 @@ class UpworkProcess:
         self._driver = None
         self._page = UpworkPage()
 
+<<<<<<< HEAD
+    def goMainPage(self):
+        self._driver.get('https://www.upwork.com/o/jobs/browse/')
+
+=======
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
     def setCookies(self):
         self._driver.get(URL_MAIN)
         self._driver.delete_all_cookies()
@@ -231,6 +295,40 @@ class UpworkProcess:
         with DriverConn('firefox', headless) as up._driver:
             up._page.setDriver(up._driver)
 
+<<<<<<< HEAD
+            #if Cookies.is_exist():
+            #    up.setCookies()
+            #else:
+            #    up.authentication()
+            #    time.sleep(TIMEOUT)
+            #    Cookies.add(up.cookies)
+            #    logger.debug('Cookies saved.')
+            up.goMainPage()
+            up.downloadPages()
+
+    def gotoUrl(self, url):
+        self._driver.get(url)
+
+    def downloadPages(self):
+        #time.sleep(1)
+        #self._page.selectJobsPerPage()
+        for word in db.getWordsSearch():
+            logger.info('Download page: Key word: {}'.format(word['text']))
+            self._page.getJobFeed(word['text'])
+            time.sleep(1)
+            sections = self._page.parseJobFeed(word)
+            posts = list()
+            time.sleep(2)
+            for url in self._page.getUrls():
+                time.sleep(5)
+                logger.debug('Goto: {}'.format(url))
+                self.gotoUrl(url)
+                #WebDriverWait(self._driver, 120).until(
+                #EC.text_to_be_present_in_element(
+                #  By.TAG_NAME, "h1"), "Job details")
+                item = self._driver.find_element_by_tag_name('body')
+                post = Post.parse(item, url)
+=======
             if Cookies.is_exist():
                 up.setCookies()
             else:
@@ -251,6 +349,7 @@ class UpworkProcess:
             posts = list()
             for section in sections:
                 post = Post.parse(section)
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
                 logger.debug(post.title)
                 posts.append(post)
 
@@ -259,4 +358,8 @@ class UpworkProcess:
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
+        UpworkProcess.run(headless=False)
+=======
         UpworkProcess.run(headless=True)
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65

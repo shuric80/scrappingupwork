@@ -47,7 +47,11 @@ if __name__ ==  '__main__':
         app.run(debug=True)
 
     elif sys.argv[1] == 'run':
+<<<<<<< HEAD
+        UpworkProcess.run(headless=False)
+=======
         UpworkProcess.run()
+>>>>>>> b31a3bbcbcf286e136b6300936ab966c0dbf6c65
 
     else:
         pass
