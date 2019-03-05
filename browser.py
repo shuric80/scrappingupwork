@@ -2,7 +2,6 @@ import sys
 import os
 import time
 import random
-from random import shuffle
 from datetime import datetime
 import logging
 from importlib import import_module
@@ -119,7 +118,7 @@ class DriverConn:
     def __exit__(self, exc_type, exc_val, exc_tb):
         if exc_val:
             self.driver.save_screenshot('logs/screenshot_{}.png'.format(datetime.now()))
-            #self.driver.close()
+            self.driver.close()
             raise Exception('{}:{}'.format(exc_type, exc_val))
 
 
