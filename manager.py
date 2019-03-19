@@ -38,7 +38,7 @@ def api_words_all():
 
 
 if __name__ ==  '__main__':
-    
+
     if sys.argv[1] == "create":
         db.createDB()
     elif sys.argv[1] == 'add':
@@ -49,6 +49,7 @@ if __name__ ==  '__main__':
 
     elif sys.argv[1] == 'run':
         UpworkProcess.run(headless=False)
+
     else:
         pass
 

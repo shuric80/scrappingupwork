@@ -47,6 +47,7 @@ POST_FIELDS_PATTERN = dict(
     location='.//span[@data-job-client-location]',
     feedback=".//span[@itemprop='ratingValue']"
     )
+
 #.get_attribute('data-eo-popover-html-unsafe')
 
 
@@ -59,6 +60,7 @@ class Post:
          """
         post = cls()
         post.url = url
+
         for name, pattern in POST_FIELDS_PATTERN.items():
             try:
                 elem = section.find_element_by_xpath(pattern)
@@ -202,6 +204,7 @@ class UpworkPage:
         #elem.submit()
         self._driver.find_element_by_xpath(".//button[@class='btn btn-primary']").click()
 
+
     def parseJobFeed(self, word):
         time.sleep(TIMEOUT)
         #self.driver.wait.until(EC.title_is('Freelance Python Jobs Online - Upwork'))
@@ -218,6 +221,7 @@ class UpworkProcess:
 
     def goMainPage(self):
         self._driver.get('https://www.upwork.com/o/jobs/browse/')
+
 
     def setCookies(self):
         self._driver.get(URL_MAIN)
