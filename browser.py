@@ -254,7 +254,7 @@ class UpworkProcess:
             #    time.sleep(TIMEOUT)
             #    Cookies.add(up.cookies)
             #    logger.debug('Cookies saved.')
-            up.goMainPage()
+            #up.goMainPage()
             up.downloadPages()
 
     def gotoUrl(self, url):
@@ -264,6 +264,7 @@ class UpworkProcess:
         #time.sleep(1)
         #self._page.selectJobsPerPage()
         for word in db.getWordsSearch():
+            self.goMainPage()
             logger.info('Download page: Key word: {}'.format(word['text']))
             self._page.getJobFeed(word['text'])
             time.sleep(1)
