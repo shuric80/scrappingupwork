@@ -53,7 +53,17 @@ POST_FIELDS_PATTERN = dict(
 
 class Post:
     """storage job post
-      """
+       """
+    def extractElement(self, doc, name, value, attr=None):
+
+         try:
+             if not attr:
+                 setattr(self, name , doc.find_element_by_xpath(value).text)
+             else:
+                 setattr(self, name , doc.find_element_by_xpath(value).get_attribute(attr))
+         except NoSuchElementException as e:
+             setattr(self, name, None)
+
     @classmethod
     def parse(cls, section, url):
         """ create post storage
@@ -61,23 +71,15 @@ class Post:
         post = cls()
         post.url = url
 
-        for name, pattern in POST_FIELDS_PATTERN.items():
-            try:
-                elem = section.find_element_by_xpath(pattern)
-            except NoSuchElementException as e:
-                elem = None
-                logger.error('No such element:{}'.format(name))
-            else:
-                if name == 'url':
-                    setattr(post, name, elem.get_attribute('text'))
-                elif name == 'posted_time':
-                    setattr(post, name, elem.get_attribute('datetime'))
-                elif name == 'feedback':
-                    setattr(post, name, elem.get_attribute('data-eo-popover-html-unsafe'))
-                elif hasattr(elem, 'text'):
-                    setattr(post, name, elem.text)
-                else:
-                    pass
+        post.extractElement(section, 'title', './/header')
+        post.extractElement(section, 'ptype', ".//i[contains(@class,'jobdetails-tier-level-icon')]/parent::li/small")
+        post.extractElement(section, 'posted_time', ".//span[@itemProp='datePosted']", 'datetime')
+        post.extractElement(section, 'duration', ".//ul[@class='job-features p-0']/li")
+        post.extractElement(section, 'description', ".//div[@class='job-description']")
+        post.extractElement(section, 'proposal', ".//h4[text()='Activity on this job']/parent::section/ul/li")
+        post.extractElement(section, 'location', './/span[@data-job-client-location]')
+        post.extractElement(section, 'feedback', ".//span[@itemprop='ratingValue']", 'data-eo-popover-html-unsafe')
+
         return post
 
 
@@ -100,7 +102,6 @@ class Driver:
     def create(name_browser, headless):
         browser, options = Browser.create(name_browser)
         options.headless = headless
-        #options.add_argument("user-data-dir=/home/shuric/.config/chromium/")
         driver = browser.WebDriver(options=options)
         driver.maximize_window()
         driver.wait = WebDriverWait(driver, 60)
@@ -138,15 +139,6 @@ class Cookies:
     def getAll():
         with open('cookies.pkl', 'rb') as f:
             return pickle.load(f)
-
-
-class User:
-    @staticmethod
-    def get():
-        with open('user.txt', 'r') as f:
-            login, password = f.read().split(':')
-
-        return login, password
 
 
 class UpworkPage:
@@ -233,7 +225,7 @@ class UpworkProcess:
         logger.debug('Cookies append in browser.')
 
     def authentication(self):
-        login, password = User.get()
+        #login, password = User.get()
         self._driver.get(URL_LOGIN)
 
         self._page.setLogin(login)
@@ -246,7 +238,7 @@ class UpworkProcess:
         return self._driver.get_cookies()
 
     @classmethod
-    def run(cls, headless=True):
+    def run(cls, auth = None, headless=True):
         up = cls()
         with DriverConn('firefox', headless) as up._driver:
             up._page.setDriver(up._driver)
