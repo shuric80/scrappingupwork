@@ -1,6 +1,7 @@
 import os
 import sys
 #from celery import Celery
+import argparse
 from flask import Flask, jsonify, redirect
 from flask import render_template
 #from celery import Celery
@@ -14,6 +15,14 @@ app = Flask(__name__)
 #celery = Celery(__name__, backend='amqp', broker='amqp://')
 #celery.config_from_object('config')
 
+parser = argparse.ArgumentParser(description='Process scrape upword site')
+
+parser.add_argument('cmd', action='store', nargs='+')
+parser.add_argument('--add', '-a', nargs='+', action='store', help='Append new words')
+parser.add_argument('--headless', action='store_false', help='Browser set headless')
+parser.add_argument('--user', '-u', type=str, help='User login', action='store')
+parser.add_argument('--password', '-p', type=str, help='User password', action='store')
+parser.add_argument('--debug', '-d', action='store_true', help='Debug mode')
 
 @app.route('/')
 def index():
@@ -38,20 +47,25 @@ def api_words_all():
 
 
 if __name__ ==  '__main__':
-
-    if sys.argv[1] == "create":
+    options = parser.parse_args()
+    if 'create' in options.cmd:
         db.createDB()
-    elif sys.argv[1] == 'add':
-        for w in sys.argv[2:]:
-            db.addWordsSearch(w)
-    elif sys.argv[1] == 'runserver':
-        app.run(debug=True)
 
-    elif sys.argv[1] == 'run':
-        UpworkProcess.run(headless=False)
+    elif 'add' in options.cmd:
+        for word in options.cmd[1:]:
+            db.addWordsSearch(word)
 
-    else:
-        pass
+    elif 'runserver' in options.cmd:
+        app.run(debug=options.debug)
 
+    elif 'run' in options.cmd:
+        d_params = dict(
+            headless=options.headless,
+            debug=options.debug,
+            login=options.user,
+            password=options.password
+        )
+
+        UpworkProcess.run(d_params)
     #elif sys.argv[1] == 'start':
     #    subprocess.Popen("celery -A manager.celery worker --beat --loglevel=info")

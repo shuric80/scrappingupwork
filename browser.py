@@ -32,24 +32,6 @@ URL_LOGIN = 'https://www.upwork.com/ab/account-security/login'
 URL_FIND = 'https://www.upwork.com/ab/find-work'
 TIMEOUT = 5
 
-POST_FIELDS_PATTERN = dict(
-    title='.//header',
-    #url='.//a[@data-ng-href]',
-    #ptype=".//strong[text()='Project Type:']/parent::li/span",
-    ptype=".//i[contains(@class,'jobdetails-tier-level-icon')]/parent::li/small",
-    posted_time=".//span[@itemProp='datePosted']",
-    duration=".//ul[@class='job-features p-0']/li",
-    #tags='.//span[@data-job-sands-attrs]',
-    description=".//div[@class='job-description']",
-    proposal=".//h4[text()='Activity on this job']/parent::section/ul/li",
-    #verified='.//span[@data-job-client-payment-verified]',
-    #spent='.//span[@data-job-client-spent-tier]',
-    location='.//span[@data-job-client-location]',
-    feedback=".//span[@itemprop='ratingValue']"
-    )
-
-#.get_attribute('data-eo-popover-html-unsafe')
-
 
 class Post:
     """storage job post
@@ -214,7 +196,6 @@ class UpworkProcess:
     def goMainPage(self):
         self._driver.get('https://www.upwork.com/o/jobs/browse/')
 
-
     def setCookies(self):
         self._driver.get(URL_MAIN)
         self._driver.delete_all_cookies()
@@ -224,8 +205,7 @@ class UpworkProcess:
         self._driver.refresh()
         logger.debug('Cookies append in browser.')
 
-    def authentication(self):
-        #login, password = User.get()
+    def authentication(self, login, password):
         self._driver.get(URL_LOGIN)
 
         self._page.setLogin(login)
@@ -238,20 +218,21 @@ class UpworkProcess:
         return self._driver.get_cookies()
 
     @classmethod
-    def run(cls, auth = None, headless=True):
+    def run(cls, args=None):
         up = cls()
-        with DriverConn('firefox', headless) as up._driver:
+        with DriverConn('firefox', args['headless']) as up._driver:
             up._page.setDriver(up._driver)
 
-            #if Cookies.is_exist():
-            #    up.setCookies()
-            #else:
-            #    up.authentication()
-            #    time.sleep(TIMEOUT)
-            #    Cookies.add(up.cookies)
-            #    logger.debug('Cookies saved.')
+            if False:#Cookies.is_exist():
+                up.setCookies()
+            else:
+                up.authentication(args['login'], args['password'])
+                time.sleep(TIMEOUT)
+                Cookies.add(up.cookies)
+                logger.debug('Cookies saved.')
+
             #up.goMainPage()
-            up.downloadPages()
+            #up.downloadPages()
 
     def gotoUrl(self, url):
         self._driver.get(url)
@@ -284,4 +265,4 @@ class UpworkProcess:
 
 
 if __name__ == '__main__':
-        UpworkProcess.run(headless=False)
+        UpworkProcess.run()
