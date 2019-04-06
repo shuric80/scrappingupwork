@@ -47,15 +47,15 @@ def createDBPost(post):
     dbpost.ptype = PType(post.ptype)
     #dbpost.tier = post.tier
     dbpost.duration = post.duration
-    #dbpost.posted_time = datetime.strptime(post.posted_time, '%Y-%m-%dT%H:%M:%S%z')
-    post.posted_time = post.posted_time
+    dbpost.posted_time = datetime.strptime(post.posted_time, '%Y-%m-%dT%H:%M:%S%z')
+    #post.posted_time = post.posted_time
     #dbpost.tags = post.tags
     dbpost.description = post.description
     dbpost.proposal = post.proposal
-    #dbpost.payment = 'Payment verified' == post.verified
-    #dbpost.spent = post.spent
-    #dbpost.location = post.location
-    #dbpost.feedback = post.feedback
+    dbpost.payment = 'Payment verified' == post.verified
+    dbpost.spent = post.spent
+    dbpost.location = post.location
+    dbpost.feedback = float(post.feedback.split('=')[1])
 
     return dbpost
 

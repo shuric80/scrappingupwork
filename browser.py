@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+import re
 import random
 from datetime import datetime
 import logging
@@ -30,37 +31,52 @@ logger.setLevel(logging.DEBUG)
 URL_MAIN = 'https://www.upwork.com'
 URL_LOGIN = 'https://www.upwork.com/ab/account-security/login'
 URL_FIND = 'https://www.upwork.com/ab/find-work'
+URL_FIND_NONAME = 'https://www.upwork.com/o/jobs/browse/'
 TIMEOUT = 5
 
 
 class Post:
     """storage job post
        """
-    def extractElement(self, doc, name, value, attr=None):
+    def to_dict(self):
+        return dict([(key, value) for key, value in self.__dict__.items()])
 
-         try:
-             if not attr:
-                 setattr(self, name , doc.find_element_by_xpath(value).text)
-             else:
-                 setattr(self, name , doc.find_element_by_xpath(value).get_attribute(attr))
-         except NoSuchElementException as e:
-             setattr(self, name, None)
+    def extractElement(self, doc, name, value, attr=None):
+        try:
+            if not attr:
+                setattr(self, name , doc.find_element_by_xpath(value).text)
+            else:
+                setattr(self, name , doc.find_element_by_xpath(value).get_attribute(attr))
+        except NoSuchElementException as e:
+            setattr(self, name, None)
 
     @classmethod
-    def parse(cls, section, url):
+    def parse(cls, section, url, posted_time):
         """ create post storage
          """
         post = cls()
         post.url = url
+        post.posted_time = posted_time
+
+        section_about_client = section.find_element_by_xpath(".//h4[contains(text(), 'About the client')]/parent::section")
 
         post.extractElement(section, 'title', './/header')
         post.extractElement(section, 'ptype', ".//i[contains(@class,'jobdetails-tier-level-icon')]/parent::li/small")
-        post.extractElement(section, 'posted_time', ".//span[@itemProp='datePosted']", 'datetime')
+        post.extractElement(section_about_client, 'verified', ".//span[contains(@class, 'air-icon-verified')]/parent::div")
         post.extractElement(section, 'duration', ".//ul[@class='job-features p-0']/li")
         post.extractElement(section, 'description', ".//div[@class='job-description']")
-        post.extractElement(section, 'proposal', ".//h4[text()='Activity on this job']/parent::section/ul/li")
-        post.extractElement(section, 'location', './/span[@data-job-client-location]')
-        post.extractElement(section, 'feedback', ".//span[@itemprop='ratingValue']", 'data-eo-popover-html-unsafe')
+        post.extractElement(section, 'proposal', ".//h4[contains(text(), 'Activity on this job')]/parent::div/ul/li")
+        post.extractElement(section_about_client, 'location', "ul/li[1]/strong[@class='primary']")
+        post.extractElement(section_about_client, 'spent', "ul/li[3]/strong[@class='primary']")
+        post.extractElement(section_about_client, 'history', "ul/li[2]/strong[@class='primary']" )
+        post.extractElement(section_about_client, 'feedback', ".//span[contains(@class, 'work-rating')]", 'data-ng-init')
+        post.extractElement(section, 'price', ".//i[contains(@class, 'jobdetails-tier-level-icon')]/parent::li/strong")
+        post.extractElement(section, 'interview', ".//span[contains(text(), 'Interviewing:')]/parent::li")
+
+        #post.ptype = True if 'Fixed price' in post.ptype else False
+        #post.is_verified = True if 'Payment method verified' in post.is_verified else False
+        #post.posted_time = datetime.strptime(posted_time, '%Y-%m-%dT%H:%M:%S%z')
+        #post.feedback = re.findall('(\d+\.?\d+)', post.feedback)[0]
 
         return post
 
@@ -102,8 +118,8 @@ class DriverConn:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if exc_val:
-            self.driver.save_screenshot('logs/screenshot_{}.png'.format(datetime.now()))
-            self.driver.close()
+            #self.driver.save_screenshot('logs/screenshot_{}.png'.format(datetime.now()))
+            #self.driver.close()
             raise Exception('{}:{}'.format(exc_type, exc_val))
 
 
@@ -130,6 +146,10 @@ class UpworkPage:
     def getUrls(self):
         urls = [url.get_attribute('href') for url in self._driver.find_elements_by_xpath(".//h4[contains(@class,'job-title')]/a")]
         return urls
+
+    def getTms(self):
+        tms = [tm .get_attribute('datetime') for tm in self._driver.find_elements_by_xpath(".//time[@datetime]")]
+        return tms
 
     def setDriver(self, driver):
         self._driver = driver
@@ -174,9 +194,13 @@ class UpworkPage:
         elem = self._driver.find_element_by_id('search-box-el')
         time.sleep(1)
         self.fillForm(elem, text)
-        time.sleep(1)
+        time.sleep(3)
         #elem.submit()
-        self._driver.find_element_by_xpath(".//button[@class='btn btn-primary']").click()
+        #self._driver.find_element_by_xpath(".//button[@class='btn btn-primary']").click()
+        #try:
+        #    self._driver.find_element_by_xpath(".//span[@class='btn btn-primary']").click()
+        #except NoSuchElementException as e:
+        elem.click()
 
 
     def parseJobFeed(self, word):
@@ -192,9 +216,11 @@ class UpworkProcess:
     def __init__(self):
         self._driver = None
         self._page = UpworkPage()
+        self._url = None
 
     def goMainPage(self):
-        self._driver.get('https://www.upwork.com/o/jobs/browse/')
+        #self._driver.get('https://www.upwork.com/o/jobs/browse/')
+        self._driver.get(self._url)
 
     def setCookies(self):
         self._driver.get(URL_MAIN)
@@ -218,28 +244,32 @@ class UpworkProcess:
         return self._driver.get_cookies()
 
     @classmethod
-    def run(cls, args=None):
+    def run(cls, d_args=None):
         up = cls()
-        with DriverConn('firefox', args['headless']) as up._driver:
+        with DriverConn('firefox', d_args['headless']) as up._driver:
             up._page.setDriver(up._driver)
+            up._url = URL_FIND
 
-            if False:#Cookies.is_exist():
+            if d_args['noname']:
+                up._url = URL_FIND_NONAME
+                #url_page = URL_FIND_NONAME
+
+            elif Cookies.is_exist():
                 up.setCookies()
-            else:
-                up.authentication(args['login'], args['password'])
+
+            elif d_args['login'] and d_args['password']:
+                up.authentication(d_args['login'], d_args['password'])
                 time.sleep(TIMEOUT)
                 Cookies.add(up.cookies)
                 logger.debug('Cookies saved.')
 
-            #up.goMainPage()
-            #up.downloadPages()
+            up.downloadPages()
 
     def gotoUrl(self, url):
         self._driver.get(url)
 
     def downloadPages(self):
-        #time.sleep(1)
-        #self._page.selectJobsPerPage()
+
         for word in db.getWordsSearch():
             self.goMainPage()
             logger.info('Download page: Key word: {}'.format(word['text']))
@@ -248,16 +278,14 @@ class UpworkProcess:
             sections = self._page.parseJobFeed(word)
             posts = list()
             time.sleep(2)
-            for url in self._page.getUrls():
+            l_date_posted = self._page.getTms()
+
+            for n, url in enumerate(self._page.getUrls()):
                 time.sleep(5)
                 logger.debug('Goto: {}'.format(url))
                 self.gotoUrl(url)
-                #WebDriverWait(self._driver, 120).until(
-                #EC.text_to_be_present_in_element(
-                #  By.TAG_NAME, "h1"), "Job details")
                 item = self._driver.find_element_by_tag_name('body')
-                post = Post.parse(item, url)
-                logger.debug(post.title)
+                post = Post.parse(item, url, l_date_posted[n])
                 posts.append(post)
 
             db.addPosts(posts, word['text'])

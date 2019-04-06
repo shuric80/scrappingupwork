@@ -1,5 +1,5 @@
 import enum
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum, Boolean
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum, Boolean, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship, backref
@@ -31,9 +31,8 @@ class Post(Base):
     title = Column("Title job post", String, nullable=False)
     url = Column('URL', String, unique=True, nullable=False)
     ptype = Column('Type', Enum(PType))
-    tier = Column(String)
     duration = Column(String)
-    #posted_time = Column("Created post", DateTime, nullable=False)
+    history = Column(String)
     posted_time = Column("Created post", String)
     tags = Column(String)
     description = Column("Description post", String)
@@ -41,7 +40,9 @@ class Post(Base):
     payment = Column('Payment verified', Boolean)
     spent = Column(String)
     location = Column("Location client", String)
-    feedback = Column("Feedback", String)
+    price = Column(String)
+    interview = Column(String)
+    feedback = Column("Feedback", Float)
 
     word_id = Column(Integer, ForeignKey('word.id'))
 

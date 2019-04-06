@@ -20,9 +20,10 @@ parser = argparse.ArgumentParser(description='Process scrape upword site')
 parser.add_argument('cmd', action='store', nargs='+')
 parser.add_argument('--add', '-a', nargs='+', action='store', help='Append new words')
 parser.add_argument('--headless', action='store_false', help='Browser set headless')
-parser.add_argument('--user', '-u', type=str, help='User login', action='store')
+parser.add_argument('--login', '-l', type=str, help='User login', action='store')
 parser.add_argument('--password', '-p', type=str, help='User password', action='store')
 parser.add_argument('--debug', '-d', action='store_true', help='Debug mode')
+parser.add_argument('--noname', '-u', action='store_true', help='Noname mode')
 
 @app.route('/')
 def index():
@@ -62,8 +63,9 @@ if __name__ ==  '__main__':
         d_params = dict(
             headless=options.headless,
             debug=options.debug,
-            login=options.user,
-            password=options.password
+            login=options.login,
+            password=options.password,
+            noname=options.noname
         )
 
         UpworkProcess.run(d_params)
