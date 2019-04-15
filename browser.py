@@ -118,8 +118,8 @@ class DriverConn:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if exc_val:
-            #self.driver.save_screenshot('logs/screenshot_{}.png'.format(datetime.now()))
-            #self.driver.close()
+            self.driver.save_screenshot('logs/screenshot_{}.png'.format(datetime.now()))
+            self.driver.close()
             raise Exception('{}:{}'.format(exc_type, exc_val))
 
 
@@ -283,10 +283,14 @@ class UpworkProcess:
             for n, url in enumerate(self._page.getUrls()):
                 time.sleep(5)
                 logger.debug('Goto: {}'.format(url))
-                self.gotoUrl(url)
-                item = self._driver.find_element_by_tag_name('body')
-                post = Post.parse(item, url, l_date_posted[n])
-                posts.append(post)
+                try:
+                    self.gotoUrl(url)
+                except  TimeoutException as e:
+                    logger.error(e)
+                else:
+                    item = self._driver.find_element_by_tag_name('body')
+                    post = Post.parse(item, url, l_date_posted[n])
+                    posts.append(post)
 
             db.addPosts(posts, word['text'])
             logger.debug('Count found posts: {}'.format(len(posts)))

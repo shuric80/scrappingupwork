@@ -55,7 +55,10 @@ def createDBPost(post):
     dbpost.payment = 'Payment verified' == post.verified
     dbpost.spent = post.spent
     dbpost.location = post.location
-    dbpost.feedback = float(post.feedback.split('=')[1])
+    try:
+        dbpost.feedback = float(post.feedback.split('=')[1])
+    except AttributeError as e:
+        logger.error(e)
 
     return dbpost
 
